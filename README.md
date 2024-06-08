@@ -1,6 +1,7 @@
 # Sketched-and-truncated-Krylov4MatrixEqs
 
 Version: 1
+
 Copyright by Davide Palitta (University of Bologna), Marcel Schweitzer (Bergische Universitaet Wuppertal), and Valeria Simoncini (University of Bologna).
 
 The software is licensed under GPLv3 or later. See LICENSE for details.
