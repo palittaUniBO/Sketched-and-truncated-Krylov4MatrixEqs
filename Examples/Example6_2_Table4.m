@@ -48,7 +48,7 @@ K=800; % Number of time steps
 
 for i=1:length(Hmax)
     for j=1:length(K)
-        fprintf('***************** n=%d\n************',nvect(i))
+        fprintf('***************** n=%d ************\n',nvect(i))
         % Space time matrices
         fprintf('create space-time data\n')
         [N_time, M_time, A_space, M_space, F_ST, ~, ~] = ...
@@ -91,19 +91,19 @@ for i=1:length(Hmax)
         fprintf('sketched-and-truncated \n its: %d, CPU Time: %e, Computed res norm: %e, \n Actual res norm: %e, ktrunc: %d\n Rank of the computed solution: %d, Storage demand: %d\n',...
               out_sketched.it,time_sketched,out_sketched.res_vec(end), actualres,opts.ktrunc(1),size(out_sketched.Z1,2),max(opts.ktrunc,size(out_sketched.Z1,2)))
 
-%         %% FULL ARNOLDI
-%         opts.ktrunc=opts.m;
-% 
-%         tt=tic;
-%         [out_fullArnoldi]=arnoldi_tr_Sylv_twopass_onesided(eqn,opts);
-%         time_full=toc(tt);
-%                         
-%         [~,R1]=qr([A_space*out_fullArnoldi.Z1, M_space*out_fullArnoldi.Z1,-eqn.C1],0);
-%         [~,R2]=qr([M_time*out_fullArnoldi.Z2, N_time*out_fullArnoldi.Z2,eqn.C2],0);
-%         actualres=norm(R1*R2','fro')/norm(eqn.C1*eqn.C2','fro');
-%         fprintf('full Arnoldi \n its: %d, CPU Time: %e, Computed res norm: %e, \n Actual res norm: %e, ktrunc: %d\n Rank of the computed solution: %d, Storage demand: %d\n',...
-%               out_fullArnoldi.it,time_full,out_fullArnoldi.res_vec(end), actualres,opts.ktrunc(1),size(out_fullArnoldi.Z1,2),max((out_fullArnoldi.it+1),size(out_fullArnoldi.Z1,2)))
-%       
+         %% FULL ARNOLDI
+         opts.ktrunc=opts.m;
+ 
+         tt=tic;
+         [out_fullArnoldi]=arnoldi_tr_Sylv_twopass_onesided(eqn,opts);
+         time_full=toc(tt);
+                         
+         [~,R1]=qr([A_space*out_fullArnoldi.Z1, M_space*out_fullArnoldi.Z1,-eqn.C1],0);
+         [~,R2]=qr([M_time*out_fullArnoldi.Z2, N_time*out_fullArnoldi.Z2,eqn.C2],0);
+         actualres=norm(R1*R2','fro')/norm(eqn.C1*eqn.C2','fro');
+         fprintf('full Arnoldi \n its: %d, CPU Time: %e, Computed res norm: %e, \n Actual res norm: %e, ktrunc: %d\n Rank of the computed solution: %d, Storage demand: %d\n',...
+               out_fullArnoldi.it,time_full,out_fullArnoldi.res_vec(end), actualres,opts.ktrunc(1),size(out_fullArnoldi.Z1,2),max((out_fullArnoldi.it+1),size(out_fullArnoldi.Z1,2)))
+       
         %% Truncated ARNOLDI
         opts.ktrunc=3;
         opts.m=1000;
