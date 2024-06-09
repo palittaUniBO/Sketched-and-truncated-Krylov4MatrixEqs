@@ -15,6 +15,7 @@ ArXiv: 2311.16019
 This software is intended to reproduce the numerical experiments illustrated in the manuscript mentioned above.
 The software has been developed by using Matlab, version 2022b. 
 The function lyap.m of the Matlab Control System Toolbox is required.
+Moreover, assembling the coefficients for Example6.2 needs the Matlab Partial Differential Equation Toolbox.
 
 Please, acknowledge our work by citing our manuscript whenever you use the software provided here in your research.
 
