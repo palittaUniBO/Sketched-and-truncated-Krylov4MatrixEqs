@@ -35,6 +35,7 @@ n = size(eqn.A,1);
 
 opts.check_res=1;
 opts.store=1;
+opts-ktrunc=10;
 % Maximum Krylov dimension
 opts.m = 800;
 M =opts.m;
