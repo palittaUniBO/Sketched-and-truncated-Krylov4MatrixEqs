@@ -24,8 +24,3 @@ while (res/res0 > tol & k<maxit)
   res=norm(r,'fro');
 
 end	
-% fprintf('CG its %d  rel.res %d\n',k,res/res0)
-%toc
-
-%semilogy(mem,'linewidth',6)
-
