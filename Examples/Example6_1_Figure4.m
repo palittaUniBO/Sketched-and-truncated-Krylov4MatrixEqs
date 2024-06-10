@@ -26,7 +26,7 @@ N = 300;
 
 % nu indicates the viscosity parameter
 nu=1e-3;
-ktrunc=10;
+opts.ktrunc=10;
 r=1;
 
 [eqn.A, eqn.B, eqn.C1, eqn.C2] = conv_diff_2d_differentConv(N,r,nu,false);
@@ -35,7 +35,7 @@ n = size(eqn.A,1);
 
 opts.check_res=1;
 opts.store=1;
-opts-ktrunc=10;
+
 % Maximum Krylov dimension
 opts.m = 800;
 M =opts.m;
