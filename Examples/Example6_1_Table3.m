@@ -61,7 +61,7 @@ for r=[1 3]
             %%%% TRUNCATED (NO SKETCHING)
 
             if r==1
-                ktruncA=20;
+                ktruncA=40;
                 ktruncB_vect=[40 60];
             elseif r==3
                 ktruncA=100;
