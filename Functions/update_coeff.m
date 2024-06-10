@@ -20,7 +20,7 @@ tau_d1=R(ds+1:ds+s,ds+1:ds+s);
 T_H=R(1:ds,ds+1:ds+s);
 hh=H(ds+1:ds+s,:);
 ed=zeros(ds,s);
-ed(ds-s+s:ds,:)=eye(s);
+ed(ds-s+1:ds,:)=eye(s);
 
 Hnew(1:ds,1:ds)=Hold+T_H*(h/tau_d)*ed';
 Hnew(1:ds,ds+1:ds+s)=-Hold(1:ds,1:ds)*(T_H/tau_d1)+R(1:ds,1:ds)*(H(1:ds,:)/tau_d1)+T_H*(hh/tau_d1)-T_H*(h/tau_d*(ed'*T_H)/tau_d1);
