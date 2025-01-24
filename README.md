@@ -9,8 +9,7 @@ The software is licensed under GPLv3 or later. See LICENSE for details.
 This software package includes the sketched-and-truncated and the (plain) truncated Krylov subspace methods for Sylvester matrix equations developed and analysed in the manuscript
 
 Sketched and Truncated Polynomial Krylov Subspace Methods: Matrix Equations. 
-Davide Palitta, Marcel Schweitzer, Valeria Simoncini.
-ArXiv: 2311.16019
+Davide Palitta, Marcel Schweitzer, Valeria Simoncini. Math Comp (2024)
 
 This software is intended to reproduce the numerical experiments illustrated in the manuscript mentioned above.
 The software has been developed by using Matlab, version 2022b. 
