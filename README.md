@@ -1,4 +1,4 @@
-# Sketched-and-truncated-Krylov4MatrixEqs
+# Sketched and truncated polynomial Krylov methods: Matrix Sylvester equations
 
 Version: 1
 
